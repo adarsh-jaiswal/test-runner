@@ -16,12 +16,13 @@ public class TestRunnerResource {
 
   @PostMapping("/test-runner/{commitHash}")
   public void runTest(@PathVariable String commitHash) {
-    System.out.println("######################    in run test commit hash   ######### : "+ commitHash);
-    testRunnerService.runTest(commitHash);
+      System.out.println("######################    in run test commit hash   ######### : "+ commitHash);
+
+      testRunnerService.runTest(commitHash);
   }
 
   @GetMapping("/")
   public String home() {
-    return "Hello Docker World";
+      return "Hello Docker World";
   }
 }
